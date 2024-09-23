@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Flow Score Distillation for Diverse Text-to-3D Generation">
+  <meta name="keywords" content="Flow Score Distillation for Diverse Text-to-3D Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow Score Distillation for Diverse Text-to-3D Generation</title>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8W7NPFQGFL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8W7NPFQGFL');
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <!-- <script src="./static/js/index.js"></script> -->
+
+  <!-- latex symbols -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<!-- begin title -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Flow Score Distillation <br>for Diverse Text-to-3D Generation</h1>
+          <div class="is-size-4 publication-authors">
+            Anonymous Authors
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end title -->
+
+<!-- begin abstract -->
+<section class="section hero is-light" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Recent advancements in Text-to-3D generation have yielded remarkable progress, particularly through methods that rely on Score Distillation Sampling (SDS). While SDS exhibits the capability to create impressive 3D assets, it is hindered by its inherent maximum-likelihood-seeking essence, resulting in limited diversity in generation outcomes. In this paper, we discover that the Denoise Diffusion Implicit Models (DDIM) generation process (i.e. PF-ODE) can be succinctly expressed using an analogue of SDS loss. One step further, one can see SDS as a generalized DDIM generation process. Following this insight, we show that the noise sampling strategy in the noise addition stage significantly restricts the diversity of generation results. To address this limitation, we present an innovative noise sampling approach and introduce a novel text-to-3D method called Flow Score Distillation (FSD). Our validation experiments across various text-to-image Diffusion Models demonstrate that FSD substantially enhances generation diversity and quality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end abstract -->
+
+<!-- begin gallery -->
+<section class="section is-small hero" id="gallery">
+  <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div class="container">
+          
+          <h2 class="title is-3 publication-title has-text-centered">Noise Visualization</h2>
+          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser/watch0.mp4" type="video/mp4">
+              </video>
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser/watch1.mp4" type="video/mp4">
+              </video>
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser/watch2.mp4" type="video/mp4">
+              </video>
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser/watch3.mp4" type="video/mp4">
+              </video>
+              <small>"A 3D model of Digital Wristwatch,
+                photorealistic, 8K, HD"</small>
+            </div>
+          </div>
+          <br><br>
+
+          <h2 class="title is-3 publication-title has-text-centered">Gallery</h2>          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser_cut/bullcomposite.mp4" type="video/mp4">
+              </video>
+              <small>"A 3D model of a bulldozer made out of toy bricks"</small>
+            </div>
+          </div>
+          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser_cut/carcomposite.mp4" type="video/mp4">
+              </video>
+              <small>"A 3D model of an old vintage car, photorealistic,
+                8K, HD"</small>
+            </div>
+          </div>
+          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser_cut/diecomposite.mp4" type="video/mp4">
+              </video>
+              <small>"A 20-sided die made out of glass"</small>
+            </div>
+          </div>
+          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser_cut/guncomposite.mp4" type="video/mp4">
+              </video>
+              <small>"A 3D model of a gun made out of toy bricks"</small>
+            </div>
+          </div>
+          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser_cut/girlcomposite.mp4" type="video/mp4">
+              </video>
+              <small>"A 3D model of a catgirl with long hair, cat ears, and a mischievous smile in an anime style"</small>
+            </div>
+          </div>
+          <div id="hero-list">
+            <div id="tree">
+              <video id="replay-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/teaser_cut/typecomposite.mp4" type="video/mp4">
+              </video>
+              <small>"A typewriter made out of vegetables"</small>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end gallery -->
+</body>
+</html>
